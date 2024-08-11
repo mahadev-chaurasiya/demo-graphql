@@ -1,0 +1,27 @@
+
+type Mutation{
+    enrollStudent(student:StudentGraphRequest):Student
+}
+type Query{
+    getAllStudentInfo:[Student]
+    getStudentInfo(studentId:Int):Student
+    deleteStudentRecordById(studentId:Int):String
+}
+
+
+
+type Student{
+    id:ID!
+    sName:String
+    rollNo: Int
+    className: String
+    sectionName: String
+    admissionYear: String
+}
+input StudentGraphRequest{
+    sName:String
+    rollNo: Int
+    className: String
+    sectionName: String
+    admissionYear: String
+}
